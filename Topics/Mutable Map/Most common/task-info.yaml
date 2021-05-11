@@ -1,0 +1,23 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    fun main() {
+        val words = mutableMapOf<? ,?>()
+
+        print(?)
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8030#comment
+status: Solved
+feedback:
+  message: |-
+    <html>[+] Test #1. OK
+    [+] Test #2. OK
+    [+] Test #3. OK
+    [+] Test #4. OK
+
+    4 of 4 test(s) passed.</html>
+  time: Sun, 09 May 2021 11:48:41 UTC
+record: -1

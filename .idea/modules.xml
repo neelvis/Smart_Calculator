@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Smart_Calculator.iml" filepath="$PROJECT_DIR$/.idea/modules/Smart_Calculator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Smart Calculator/task/Smart_Calculator.Smart_Calculator-task.iml" filepath="$PROJECT_DIR$/.idea/modules/Smart Calculator/task/Smart_Calculator.Smart_Calculator-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Smart Calculator/task/Smart_Calculator.Smart_Calculator-task.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Smart Calculator/task/Smart_Calculator.Smart_Calculator-task.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Smart Calculator/task/Smart_Calculator.Smart_Calculator-task.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Smart Calculator/task/Smart_Calculator.Smart_Calculator-task.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Banana_/Smart_Calculator.Topics-Mutable_List-Banana_.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Banana_/Smart_Calculator.Topics-Mutable_List-Banana_.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Banana_/Smart_Calculator.Topics-Mutable_List-Banana_.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Banana_/Smart_Calculator.Topics-Mutable_List-Banana_.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Banana_/Smart_Calculator.Topics-Mutable_List-Banana_.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Banana_/Smart_Calculator.Topics-Mutable_List-Banana_.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/New List/Smart_Calculator.Topics-Mutable_List-New_List.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/New List/Smart_Calculator.Topics-Mutable_List-New_List.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/New List/Smart_Calculator.Topics-Mutable_List-New_List.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/New List/Smart_Calculator.Topics-Mutable_List-New_List.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/New List/Smart_Calculator.Topics-Mutable_List-New_List.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/New List/Smart_Calculator.Topics-Mutable_List-New_List.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Remove us/Smart_Calculator.Topics-Mutable_List-Remove_us.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Remove us/Smart_Calculator.Topics-Mutable_List-Remove_us.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Remove us/Smart_Calculator.Topics-Mutable_List-Remove_us.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Remove us/Smart_Calculator.Topics-Mutable_List-Remove_us.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Remove us/Smart_Calculator.Topics-Mutable_List-Remove_us.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Remove us/Smart_Calculator.Topics-Mutable_List-Remove_us.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Theory/Smart_Calculator.Topics-Mutable_List-Theory.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Theory/Smart_Calculator.Topics-Mutable_List-Theory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Theory/Smart_Calculator.Topics-Mutable_List-Theory.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Theory/Smart_Calculator.Topics-Mutable_List-Theory.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Theory/Smart_Calculator.Topics-Mutable_List-Theory.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable List/Theory/Smart_Calculator.Topics-Mutable_List-Theory.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Most common/Smart_Calculator.Topics-Mutable_Map-Most_common.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Most common/Smart_Calculator.Topics-Mutable_Map-Most_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Most common/Smart_Calculator.Topics-Mutable_Map-Most_common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Most common/Smart_Calculator.Topics-Mutable_Map-Most_common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Most common/Smart_Calculator.Topics-Mutable_Map-Most_common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Most common/Smart_Calculator.Topics-Mutable_Map-Most_common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Theory/Smart_Calculator.Topics-Mutable_Map-Theory.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Theory/Smart_Calculator.Topics-Mutable_Map-Theory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Theory/Smart_Calculator.Topics-Mutable_Map-Theory.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Theory/Smart_Calculator.Topics-Mutable_Map-Theory.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Theory/Smart_Calculator.Topics-Mutable_Map-Theory.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Theory/Smart_Calculator.Topics-Mutable_Map-Theory.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Vowels/Smart_Calculator.Topics-Mutable_Map-Vowels.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Vowels/Smart_Calculator.Topics-Mutable_Map-Vowels.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Vowels/Smart_Calculator.Topics-Mutable_Map-Vowels.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Vowels/Smart_Calculator.Topics-Mutable_Map-Vowels.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Vowels/Smart_Calculator.Topics-Mutable_Map-Vowels.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Topics/Mutable Map/Vowels/Smart_Calculator.Topics-Mutable_Map-Vowels.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Smart_Calculator.util.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Smart_Calculator.util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Smart_Calculator.util.main.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Smart_Calculator.util.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/util/Smart_Calculator.util.test.iml" filepath="$PROJECT_DIR$/.idea/modules/util/Smart_Calculator.util.test.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,27 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    fun main() {
+        val letter = readLine()!!.first()
+        // write your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/8029#comment
+status: Failed
+feedback:
+  message: |
+    Failed test #1 of 5. Wrong answer
+
+    This is a sample test from the problem statement!
+
+    Test input:
+    z
+    Correct output:
+    0
+
+    Your code output:
+    null
+  time: Sun, 09 May 2021 11:04:40 UTC
+record: -1

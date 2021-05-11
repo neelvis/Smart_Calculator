@@ -1,0 +1,1 @@
+fun solution(strings: MutableList<String>, str: String): MutableList<String> = strings.apply { replaceAll { if (it == str) "Banana" else it } }

@@ -1,0 +1,20 @@
+# Project exclude paths
+/.gradle/
+/Smart Calculator/task/build/
+/Smart Calculator/task/out/
+/Smart Calculator/task/out/production/classes/
+/Smart Calculator/task/out/test/classes/
+/Topics/Mutable List/Banana_/out/
+/Topics/Mutable List/Banana_/out/production/classes/
+/Topics/Mutable List/New List/out/
+/Topics/Mutable List/New List/out/production/classes/
+/Topics/Mutable List/Remove us/out/
+/Topics/Mutable List/Remove us/out/production/classes/
+/Topics/Mutable List/Theory/out/
+/Topics/Mutable List/Theory/out/production/classes/
+/Topics/Mutable Map/Most common/out/
+/Topics/Mutable Map/Most common/out/production/classes/
+/Topics/Mutable Map/Theory/out/
+/Topics/Mutable Map/Theory/out/production/classes/
+/Topics/Mutable Map/Vowels/out/
+/Topics/Mutable Map/Vowels/out/production/classes/

@@ -1,0 +1,71 @@
+<html>
+ <head></head>
+ <body>
+  <p>A typical program usually contains a lot of different objects. Usually, we need to store them right and do some actions. For example, we can sort them. For doing this, you can use <strong>arrays </strong>until you bump into a lack of functionality. Let's say, if you're not sure about the size of your array and it turns out to be longer than you expected, it'll be quite hard to extend it in the future. That's why you need to meet <strong>MutableMap</strong>.</p> 
+  <h2 style="text-align: center;">Definition</h2> 
+  <p>So, what is <strong>MutableMap</strong>? In a nutshell, it's just a container for different objects. We also call it a <strong>collection</strong>. According to the official documentation, it holds pairs of keys and related objects.</p> 
+  <p>The latter ones are simply values and we can use any kind of objects as keys and values. The mutable map type looks like <code class="language-kotlin">MutableMap&lt;K, V&gt;</code> where <code class="language-kotlin">K</code> is a key type and <code class="language-kotlin">V</code> is a value type. You can set these types.</p> 
+  <p></p>
+  <div class="alert alert-primary">
+   Before we'll move on, there is one major assumption, that is, 
+   <u>keys in MutableMap are Strings and integer numbers</u>. Anything that is 
+   <em>hashable</em> and immutable can be a key, but we will explain it in further topics. For example, don't use arrays as keys.
+  </div>
+  <p></p> 
+  <h2 style="text-align: center;">Initialization</h2> 
+  <p>Let's create our first <strong>MutableMap</strong>:</p> 
+  <pre><code class="language-kotlin">val marathon = mutableMapOf(1 to "John Doe", 2 to "Marty McFly", 3 to "Marie Curie")</code></pre> 
+  <p>There are three pairs: people and their positions. Numbers are keys and strings are values.</p> 
+  <p>The compiler will automatically define types of objects. It sounds pretty convenient.</p> 
+  <p>However, if you define an empty map, you will have to specify the type explicitly:</p> 
+  <pre><code class="language-kotlin">val marathon = mutableMapOf&lt;Int, String&gt;()</code></pre> 
+  <h2 style="text-align: center;">Accessing elements</h2> 
+  <p>OK, we have a map with no elements. Nice, now we can put some athletes' names regarding their places taken in the competition:</p> 
+  <pre><code class="language-kotlin">marathon[1] = "John Doe"
+marathon[2] = "Marty McFly"
+marathon[3] = "Marie Curie"</code></pre> 
+  <p>Now our map contains the same pairs as the map we defined earlier.</p> 
+  <p>Let's take a look at the content of our map: <code class="language-kotlin">print(marathon)</code> will output <code class="language-kotlin">{1=John Doe, 2=Marty McFly, 3=Marie Curie}</code>.</p> 
+  <p>We can easily get a specific value from the map: <code class="language-kotlin">print(marathon[1])</code> gives you <code class="language-kotlin">John Doe</code>. Oh, look: we have access to the elements just like in an array, but instead of indexes, we have keys. Also, their number is almost unlimited.</p> 
+  <h2 style="text-align: center;">Removing elements</h2> 
+  <p>What else can we do to our MutableMap? We've had already created <code class="language-kotlin">marathon</code> and added some athletes, now we're going to remove a value by its key:</p> 
+  <pre><code class="language-kotlin">marathon.remove(0)</code></pre> 
+  <p>This does nothing because there is no such key in the map. In other words, the map remains unchanged.</p> 
+  <p>Or we can remove the entry for the specified key only if it is mapped to the specified value:</p> 
+  <pre><code class="language-kotlin">marathon.remove(1, "John Doe...")</code></pre> 
+  <p>The piece of code above again won't delete anything, because we input the wrong value.</p> 
+  <p>We can also clear our map with the help of this function:</p> 
+  <pre><code class="language-kotlin">marathon.clear()</code></pre> 
+  <p>Now it's empty.</p> 
+  <h2 style="text-align: center;">Checking elements existence</h2> 
+  <p>We can move on and check if an entry exists via <code class="language-kotlin">containsKey()</code> and <code class="language-kotlin">containsValue()</code> functions to make sure that we've removed everything from the map:</p> 
+  <pre><code class="language-kotlin">print(marathon.containsValue("John Doe"))
+print(marathon.containsKey(2))
+// output: false, false</code></pre> 
+  <h2 style="text-align: center;">Iterating through elements</h2> 
+  <p>Great! let's fill <code class="language-kotlin">marathon</code> with new entries and see how we can iterate through it:</p> 
+  <pre><code class="language-kotlin">marathon[1] = "Pickle Rick"
+marathon[2] = "Rick Sanchez"
+for (entry in marathon) {
+    println(entry.value)
+}
+/* output:
+Pickle Rick
+Rick Sanchez
+ */</code></pre> 
+  <p>Great! Each <code class="language-kotlin">entry</code> consists of a <code class="language-kotlin">key</code> and its <code class="language-kotlin">value</code>, thus, we can access them both inside the cycle. What is more, we can even modify the cycle like this:</p> 
+  <pre><code class="language-kotlin">for ((key, value) in marathon) {
+    println(value)
+}</code></pre> 
+  <p>It will be absolutely the same as the previous example.</p> 
+  <p>One more thing: be careful with the ordering of <strong>MutableMap</strong>, because it will iterate in the order in which the entries were put but <strong>not</strong> in <strong>natural ordering</strong>. If you want to keep your entries ordered in a collection then you probably need to pick out something that we will explore later.</p> 
+  <h2 style="text-align: center;">Counting elements</h2> 
+  <p>There are some more useful properties and functions:</p> 
+  <ol> 
+   <li><code class="language-kotlin">size</code> shows how many entries there are in the map;</li> 
+   <li><code class="language-kotlin">isEmpty()</code> shows whether a map is empty or not.</li> 
+  </ol> 
+  <h2 style="text-align: center;">Conclusion</h2> 
+  <p>Now you know how to keep and process your objects in a more convenient way through <strong>MutableMap </strong>in<strong> </strong>Kotlin. Don't forget that you can store any kind of hashable object as a key and whatever you want as its value. You've learned many functions of <strong>MutableMap</strong> and now you're ready to dive into tasks.</p>
+ </body>
+</html>
