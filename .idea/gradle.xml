@@ -4,15 +4,21 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="delegatedBuild" value="false" />
+        <option name="delegatedBuild" value="true" />
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#JAVA_INTERNAL" />
+        <option name="gradleJvm" value="11" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Smart Calculator/task" />
+            <option value="$PROJECT_DIR$/Topics/Enum/Currencies" />
+            <option value="$PROJECT_DIR$/Topics/Enum/Currency comparison" />
+            <option value="$PROJECT_DIR$/Topics/Enum/Danger level" />
+            <option value="$PROJECT_DIR$/Topics/Enum/Rainbow colors" />
+            <option value="$PROJECT_DIR$/Topics/Enum/The rainbow order" />
+            <option value="$PROJECT_DIR$/Topics/Enum/Theory" />
             <option value="$PROJECT_DIR$/Topics/Mutable List/Banana_" />
             <option value="$PROJECT_DIR$/Topics/Mutable List/New List" />
             <option value="$PROJECT_DIR$/Topics/Mutable List/Remove us" />

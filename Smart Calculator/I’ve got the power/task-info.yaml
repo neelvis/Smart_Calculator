@@ -261,14 +261,8 @@ files:
     }
   learner_created: false
 feedback_link: https://hyperskill.org/projects/88/stages/492/implement#comment
-status: Failed
+status: Solved
 feedback:
-  message: "Wrong answer in test #1\n\nThe program cannot process addition and subtraction\
-    \ operations correctly.\n\nPlease find below the output of your program during\
-    \ this failed test.\nNote that the &#39;&gt;&#39; character indicates the beginning\
-    \ of the input line.\n\n---\n\n&gt; /help\nEnter expression and I will calc it\
-    \ for you!\nEXAMPLE: a = 5\nEXAMPLE: -3 + a * ((4 + 3) * 2 + 1) - 6 / (2 + 1)\
-    \ ^ 2\n&gt; \n&gt; n = -32\n&gt; 33 + 20 + 11 + 49 - 32 - 9 + 1 - 80 + 4\n33 20\
-    \ + 11 + 49 + 32 - 9 - 1 + 80 - 4 +\n-7"
-  time: Tue, 11 May 2021 18:26:25 UTC
-record: -1
+  message: Congratulations!
+  time: Sun, 16 May 2021 15:56:01 UTC
+record: 7

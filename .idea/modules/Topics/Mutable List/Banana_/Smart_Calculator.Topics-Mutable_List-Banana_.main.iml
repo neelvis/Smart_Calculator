@@ -37,7 +37,7 @@
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <output url="file://$MODULE_DIR$/../../../../../Topics/Mutable List/Banana_/out/production/classes" />
+    <output url="file://$MODULE_DIR$/../../../../../Topics/Mutable List/Banana_/build/classes/java/main" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Mutable List/Banana_/src">
       <sourceFolder url="file://$MODULE_DIR$/../../../../../Topics/Mutable List/Banana_/src" isTestSource="false" />

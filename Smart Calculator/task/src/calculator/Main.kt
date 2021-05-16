@@ -1,9 +1,8 @@
-    package calculator
-
 import java.lang.NumberFormatException
+import java.math.BigInteger
 import java.util.*
 
-    data class ValidationObject(val message: String = "Default", val valid: Boolean, val service: Calculator.CalculationType = Calculator.CalculationType.DEFAULT)
+data class ValidationObject(val message: String = "Default", val valid: Boolean, val service: Calculator.CalculationType = Calculator.CalculationType.DEFAULT)
 
 class Calculator {
     enum class CalculationType {
@@ -15,7 +14,7 @@ class Calculator {
         DEFAULT;
     }
     private val priority = mapOf<String, Int>("^" to 3, "*" to 2, "/" to 2, "+" to 1, "-" to 1)
-    private val variables = mutableMapOf<String, Int>()
+    private val variables = mutableMapOf<String, BigInteger>()
     private var rpn = ""
     private var stack = Stack<String>()
 
@@ -26,7 +25,7 @@ class Calculator {
         EXAMPLE: -3 + a * ((4 + 3) * 2 + 1) - 6 / (2 + 1) ^ 2
     """.trimIndent())
     }
-    /**
+    /*
      * function goes through the input string and checks whether input is correct
      * returns ValidationObject: message, expression type and flag "valid" (true/false)
     * Invalid input examples:
@@ -44,9 +43,9 @@ class Calculator {
     * -3 +++ 8 * ((4 + 3) * 2 + 1) - 6 / (2 + 1) ^ 2 -> Good, parse it*/
     fun validateInput(s: String): ValidationObject {
         if (s[0] == '/') return ValidationObject("Unknown command", valid = false)
-        if (s.toIntOrNull() != null) return ValidationObject(valid = true, service = CalculationType.SHOW_ENTERED_VALUE)
+        if (s.toBigIntegerOrNull() != null) return ValidationObject(valid = true, service = CalculationType.SHOW_ENTERED_VALUE)
         if (s.contains('=')) return validateAssignment(s.replace(Regex("\\s+"), ""))
-        if (s.contains(Regex("[^-+*/^()a-zA-Z0-9\\s] | \\d\\s\\d | $[^0-9] | [*/][*/]"))) return ValidationObject("Invalid expression #1", valid = false)
+        if (s.contains(Regex("[^-+*/^()a-zA-Z0-9\\s] | \\d\\s\\d | $[^0-9)] | [*/][*/]"))) return ValidationObject("Invalid expression #1", valid = false)
         if (s.matches(Regex("[a-zA-Z]+"))) {
             return if (!variables.containsKey(s)) ValidationObject("Unknown variable #1", valid = false)
             else ValidationObject(s, valid = true, service = CalculationType.SHOW_VAR_VALUE)
@@ -63,7 +62,7 @@ class Calculator {
         if (!varName.matches(Regex("[a-zA-Z]+")))
             return ValidationObject(message = "Invalid identifier #1", valid = false)
         return try {
-            varValue.toInt()
+            varValue.toBigInteger()
             ValidationObject("$varName=$varValue", valid = true, service = CalculationType.INIT_VAR_WITH_NUM)
         } catch (e: NumberFormatException) {
             if (!varValue.matches(Regex("[a-zA-Z]+"))) ValidationObject(message = "Invalid identifier #2", valid = false)
@@ -73,7 +72,7 @@ class Calculator {
             }
         }
     }
-    /**
+    /*
     * after input is validated, it goes through parsing function
     * Parsing rules
     * remove all spaces
@@ -83,21 +82,26 @@ class Calculator {
     * valid parsed string: - 3 + 8 * ( ( 4 + 3 ) * 2 + 1 ) - 6 / ( 2 + 1 ) ^ 2 */
     private fun parseInput(input_: String): ValidationObject {
         rpn = ""
-        val input = ""
         val elements = mutableListOf<String>()
-        var tempNumber = 0
+        var tempNumber = BigInteger.ZERO
         var flagNumber = false
+        var input = input_
         // remove spaces, fold - and + signs, add extra space to the end for parsing
-        for (c in input_.replace(Regex("\\s+"), "").replace("--", "+").replace(Regex("[+]+"), "+") + " ") {
+        for (v in variables) {
+            input = input.replace(v.key, v.value.toString())
+        }
+        for (c in input.replace(Regex("\\s+"), "")
+            .replace("--", "+")
+            .replace(Regex("[+]+"), "+") + " ") {
             if (c in '0'..'9') {
                 flagNumber = true
-                tempNumber *= 10
-                tempNumber += c - '0'
+                tempNumber *= BigInteger.TEN
+                tempNumber += (c - '0').toBigInteger()
             } else {
                 if (flagNumber) {
                     elements.add(tempNumber.toString())
                     flagNumber = false
-                    tempNumber = 0
+                    tempNumber = BigInteger.ZERO
                     elements.add(c.toString())
                 } else {
                     elements.add(c.toString())
@@ -107,7 +111,7 @@ class Calculator {
         elements.removeLast() // removing the last space symbol
 //    Dijkstra parsing
         elements.forEachIndexed { i, item ->
-            if (item.toIntOrNull() != null) {
+            if (item.toBigIntegerOrNull() != null) {
                 rpn += "$item "
             } else if (item == "(") {
                 stack.push(item)
@@ -115,16 +119,16 @@ class Calculator {
                 bracket@do {
                     if (stack.isEmpty()) return ValidationObject("Invalid expression #5", valid = false)
                     val s = stack.pop() ?: return ValidationObject("Invalid expression #3", valid = false)
-                    if (s == ")") break@bracket
+                    if (s == "(") break@bracket
                     else rpn += "$s "
                 } while (true)
             } else if (item in "-+/*^") {
-    //            checks unary -
-                if (item[0] == '-' && i == 0 ||
-                    item[0] == '-' && elements[i - 1].toIntOrNull() == null && elements[i + 1].toIntOrNull() != null) {
-                        stack.push("~")
+                //            checks unary -
+                if (item == "-" && i == 0 ||
+                    item == "-" && elements[i - 1] in "+-*/^" && elements[i + 1].toBigIntegerOrNull() != null) {
+                    stack.push("~")
                 } else {
-                    while (stack.isNotEmpty() &&
+                    while (stack.isNotEmpty() && stack.peek() != "(" &&
                         (stack.peek() == "~" || priority[stack.peek()]!! >= priority[item[0].toString()]!!)) {
                         rpn += "${stack.pop()} "
                     }
@@ -148,7 +152,7 @@ class Calculator {
     fun showVariable(varName: String) = println(variables[varName])
     fun initVariableWithNum(varParams: String) {
         val (varName, varValue) = varParams.split('=')
-        variables[varName] = varValue.toInt()
+        variables[varName] = varValue.toBigInteger()
     }
     fun initVariableWithValue(varParams: String) {
         val (varName, varValue) = varParams.split('=')
@@ -158,15 +162,15 @@ class Calculator {
     fun calculate() {
         for (elem in rpn.split(" ")) {
             when {
-                elem.toIntOrNull() != null -> stack.push(elem)
+                elem.toBigIntegerOrNull() != null -> stack.push(elem)
                 variables.containsKey(elem) -> stack.push(variables[elem].toString())
                 elem == "~" -> {
-                    val n = stack.pop().toInt()
+                    val n = stack.pop().toBigInteger()
                     stack.push((-n).toString())
                 }
                 else -> {
-                    val n1 = stack.pop().toInt()
-                    val n2 = stack.pop().toInt()
+                    val n2 = stack.pop().toBigInteger()
+                    val n1 = stack.pop().toBigInteger()
                     when (elem) {
                         "+" -> stack.push((n1 + n2).toString())
                         "-" -> stack.push((n1 - n2).toString())
@@ -177,11 +181,12 @@ class Calculator {
             }
         }
         println(stack.pop())
+
     }
     fun showNumber(s: String) = println(s)
 }
 
-fun main() {
+fun main(args: Array<String>){
     val calc = Calculator()
     do {
         val input = readLine()!!
@@ -209,5 +214,3 @@ fun main() {
         }
     } while(true)
 }
-
-

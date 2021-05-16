@@ -37,7 +37,7 @@
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <output url="file://$MODULE_DIR$/../../../../../Topics/Mutable Map/Vowels/out/production/classes" />
+    <output url="file://$MODULE_DIR$/../../../../../Topics/Mutable Map/Vowels/build/classes/java/main" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../../Topics/Mutable Map/Vowels/src">
       <sourceFolder url="file://$MODULE_DIR$/../../../../../Topics/Mutable Map/Vowels/src" isTestSource="false" />

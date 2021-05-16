@@ -37,7 +37,7 @@
     </facet>
   </component>
   <component name="NewModuleRootManager">
-    <output url="file://$MODULE_DIR$/../../../util/out/production/classes" />
+    <output url="file://$MODULE_DIR$/../../../util/build/classes/java/main" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../util/src" />
     <orderEntry type="inheritedJdk" />

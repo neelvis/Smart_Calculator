@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/271268/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Tue, 11 May 2021 16:35:46 UTC
+update_date: Sun, 16 May 2021 13:44:45 UTC
 stages:
 - id: 486
   step: 7809
@@ -25,10 +25,10 @@ stages:
   is_completed: true
 - id: 492
   step: 7815
-  is_completed: false
+  is_completed: true
 - id: 493
   step: 7816
-  is_completed: false
+  is_completed: true
 topics:
   0:
   - title: Modulo division
@@ -134,6 +134,8 @@ topics:
     theory_id: 11559
   - title: What is an exception
     theory_id: 7243
+  - title: Hierarchy of exceptions
+    theory_id: 13264
   - title: Taming exceptions
     theory_id: 7601
   - title: The try-catch statement
